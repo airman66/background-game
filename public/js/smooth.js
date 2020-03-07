@@ -1,14 +1,9 @@
 function changeBackground() {
-    if (style.background === "white") {
-        const r = Math.ceil(Math.random() * 254);
-        const g = Math.ceil(Math.random() * 254);
-        const b = Math.ceil(Math.random() * 254);
-        changeButtonColor();
-        style.background = `rgb(${r}, ${g}, ${b})`;
-    } else {
-        buttonStyle.background = "lightgrey";
-        style.background = "white";
-    }
+    const r = Math.ceil(Math.random() * 255);
+    const g = Math.ceil(Math.random() * 255);
+    const b = Math.ceil(Math.random() * 255);
+    changeButtonColor();
+    style.background = `rgb(${r}, ${g}, ${b})`;
 }
 
 function changeButtonSize() {
@@ -60,12 +55,12 @@ let buttonHeight;
 let lastX = 0;
 let lastY = 0;
 
-
-style.background = "white";
 buttonStyle.position = "absolute";
 buttonStyle.outline = "none";
 buttonStyle.border = "none";
 buttonStyle.background = "lightgrey";
+changeBackground();
+
 changeButtonSize();
 changeButtonPosition();
 
@@ -73,4 +68,8 @@ button.addEventListener("click", () => {
     changeButtonSize();
     changeButtonPosition();
     changeBackground();
+});
+
+document.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
 });

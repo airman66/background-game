@@ -13,6 +13,7 @@
 }
 
 .link {
+	border-radius: 5%;
     width: 50%;
     text-decoration: none;
     color: #000009;
@@ -20,9 +21,20 @@
     border: 3px solid black;
     padding-top: 125px;
     padding-bottom: 125px;
+    user-select:none;
     margin-right: 15px;
+	background-color: white;
+    font-family: 'Puritan', sans-serif;
+    cursor: default;
 }
 
 .link:last-child {
     margin-right: 0;
+}
+
+h1 {
+    font-family: 'Finger Paint', cursive;
+    font-size: 40px;
+    cursor: default;
+    user-select:none
 }

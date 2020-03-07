@@ -7,13 +7,26 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Background game</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Puritan&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Finger+Paint&display=swap" rel="stylesheet">
 </head>
-<body>
+<body onmousedown="return false" onselectstart="return false">
     <div class="container">
+        <h1 id="h1">
+            <span>B</span><span>a</span><span>c</span><span>k</span><span>g</span><span>r</span><span>o</span><span>u</span><span>n</span><span>d</span>
+            <span> </span><span>g</span><span>a</span><span>m</span><span>e</span>
+        </h1>
         <div class="links-block">
-            <a href="smoothMode" class="link">Smooth mode</a>
-            <a href="teleportMode" class="link">Teleport mode</a>
+            <a href="smoothMode" id="smoothLink" class="link"
+               onmousedown="return false" onselectstart="return false">
+                Smooth mode
+            </a>
+            <a href="teleportMode" id="teleportLink" class="link"
+               onmousedown="return false" onselectstart="return false">
+                Teleport mode
+            </a>
         </div>
     </div>
+	<script src="/js/index.js"></script>
 </body>
 </html>
