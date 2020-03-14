@@ -35,15 +35,19 @@ function changeButtonColor() {
 
 const button = document.getElementsByTagName("button")[0];
 const style = document.getElementsByTagName("body")[0].style;
+const menuStyle = document.getElementsByTagName("div")[1].style;
 const windowWidth = window.innerWidth;
 const windowHeight = window.innerHeight;
 const buttonStyle = button.style;
+const r = Math.ceil(Math.random() * 255);
+const g = Math.ceil(Math.random() * 255);
+const b = Math.ceil(Math.random() * 255);
 
 let buttonWidth;
 let buttonHeight;
 
-
 changeBackground();
+menuStyle.background = `rgb(${r}, ${g}, ${b})`;
 buttonStyle.position = "absolute";
 buttonStyle.outline = "none";
 buttonStyle.border = "none";
